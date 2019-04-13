@@ -3,6 +3,6 @@
 #
 
 function atp() { export PATH=$PATH:$1; echo $PATH; }
-alias ls='ls --color=auto'
+alias ls='ls -A --color=auto'
 alias cls="clear;ls"
 
