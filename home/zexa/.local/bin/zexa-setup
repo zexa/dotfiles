@@ -4,5 +4,8 @@
 # {yay, packer}
 AUR_HELPER=yay
 
-# Essentials packet
-$AUR_HELPER -Sy alacritty npm yarn neovim neovim-plug tmux tmux-tpm
+# Development
+$AUR_HELPER -Sy git 
+
+# Essentials
+$AUR_HELPER -S alacritty npm yarn neovim neovim-plug tmux tmux-tpm
