@@ -5,4 +5,4 @@
 AUR_HELPER=yay
 
 # Essentials packet
-$AUR_HELPER -Sy neovim neovim-plug
+$AUR_HELPER -Sy npm yarn neovim neovim-plug
