@@ -5,18 +5,18 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source $HOME/.bashrc.aliases
+export PS1='[\u@\h \W]\$ '
+export BROWSER=/usr/bin/firefox
+export VISUAL=nvim
+export EDITOR=nvim
+export QT_STYLE_OVERRIDE=gtk
+export QT_SELECT=qt5
+if [[ $LANG = '' ]]; then
+	export LANG=en_US.UTF-8
+fi
 
-PS1='[\u@\h \W]\$ '
-
-BROWSER=/usr/bin/firefox
-EDITOR=/usr/bin/nvim
-
-projP=/home/zexa/Projects/PERSONAL
-
-function atp() { PATH=$PATH:$1; }
+function atp() { export PATH=$PATH:$1; }
 atp ${HOME}/.npm-global/bin
 atp ${HOME}/.local/bin
 
-function atp() { PATH=$PATH:$1; echo $PATH; }
-
+source $HOME/.bashrc.aliases
