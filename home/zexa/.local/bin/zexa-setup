@@ -11,5 +11,10 @@ $AUR_HELPER -Sy git
 $AUR_HELPER -S alacritty npm yarn neovim neovim-plug tmux tmux-tpm
 
 # Settings
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
 git config --global user.name "Zexa"
 git config --global user.email "zexa@cock.li"
+
+# Optional
+npm i -g livedown
