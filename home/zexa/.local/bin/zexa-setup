@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Install AUR Helper?
+# {yay, packer}
+AUR_HELPER=yay
+
+# Essentials packet
+$AUR_HELPER -Sy neovim neovim-plug
