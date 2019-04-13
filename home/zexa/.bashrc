@@ -1,11 +1,7 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PS1='[\u@\h \W]\$ '
+export PS1='\e[1m$\e[0m '
 export BROWSER=/usr/bin/firefox
 export VISUAL=nvim
 export EDITOR=nvim
