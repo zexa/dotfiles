@@ -26,16 +26,13 @@ nnoremap td  :tabclose<CR>
 
 " Plugins
 call plug#begin()
-Plug 'qxxxb/vim-searchhi' " Highlight the current search result in a different style than the other search results.
-Plug 'itchyny/lightline.vim' " The cool blue line on the bottom 
-Plug 'shime/vim-livedown' " Live markdown preview
-Plug 'cespare/vim-toml' " Syntax for toml
-Plug 'leafgarland/typescript-vim' " Syntax for typescript
-Plug 'Quramy/tsuquyomi' " Typescript linter
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'sbdchd/neoformat' " Code formatter 
-Plug 'maksimr/vim-jsbeautify' " Code formatter for js/html/json
+  Plug 'shime/vim-livedown' " Live markdown preview
+  Plug 'cespare/vim-toml' " Syntax for toml
+  Plug 'leafgarland/typescript-vim' " Syntax for typescript
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+  Plug 'sbdchd/neoformat' " Code formatter 
+  Plug 'maksimr/vim-jsbeautify' " Code formatter for js/html/json
 call plug#end()
 
 " Plugins: Livedown
