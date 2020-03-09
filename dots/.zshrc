@@ -12,8 +12,8 @@ export PATH=$PATH:/$NPM_PACKAGES/bin
 source $HOME/.cargo/env
 
 # Python
-source $HOME/.poetry/env
-export PATH="/home/augustinas/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#source $HOME/.poetry/env
+#export PATH="/home/augustinas/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
