@@ -5,11 +5,14 @@ VERSION=${DISTRIB_ID#"DISTRIB_ID="}
 
 case $VERSION in
   Ubuntu)
+    ./global-setup
     ./ubuntu-setup
     ./symlink-setup
     ;;
   Arch)
+    ./global-setup
     ./arch-setup
     ./symlink-setup
     ;;
 esac
+

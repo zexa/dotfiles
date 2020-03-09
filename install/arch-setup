@@ -9,5 +9,3 @@ yay -Sy \
   tmux \
   npm
 
-git config --global user.name "Zexa"
-git config --global user.email "zexa@cock.li"
