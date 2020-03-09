@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DISTRIB_ID=$(cat /etc/*-release | grep DISTRIB_ID)
+VERSION=${DISTRIB_ID#"DISTRIB_ID="}
+
+case $VERSION in
+  Ubuntu)
+    ./ubuntu-setup
+    ./symlink-setup
+    ;;
+  Arch)
+    ./arch-setup
+    ./symlink-setup
+    ;;
+esac

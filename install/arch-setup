@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Install yay manually then run this script
+
+yay -Sy \
+  alacritty \
+  neovim \
+  neovim-plug \
+  tmux \
+  npm
+
+git config --global user.name "Zexa"
+git config --global user.email "zexa@cock.li"
