@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# TODO: Make this configurable
+# Git configuration
 git config --global user.name "Zexa"
 git config --global user.email "zexa@cock.li"
 
+# Install npm -g packages to home folder
+npm config set prefix ~/.npm
