@@ -26,20 +26,16 @@ nnoremap td  :tabclose<CR>
 
 " Plugins
 call plug#begin()
-  Plug 'shime/vim-livedown' " Live markdown preview
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Markdown preview
   Plug 'cespare/vim-toml' " Syntax for toml
   Plug 'leafgarland/typescript-vim' " Syntax for typescript
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+  Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense (autocomplete) engine
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'sbdchd/neoformat' " Code formatter 
   Plug 'maksimr/vim-jsbeautify' " Code formatter for js/html/json
 call plug#end()
 
-" Plugins: Livedown
-let g:livedown_autorun = 1
-let g:livedown_open = 1
-let g:livedown_port = 1337
-let g:livedown_browser = "firefox"
-
-" Plugins: Tsuquyomi
-autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+" Plugins: markdown-preview
+" TODO: Need a way to make browser env modular
+let g:mkdp_auto_start=1
+let g:mkdp_browser=$FIREFOX
