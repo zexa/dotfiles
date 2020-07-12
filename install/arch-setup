@@ -1,11 +1,18 @@
 #!/bin/bash
 
-# Install yay manually then run this script
+set -x
 
-yay -Sy \
+yay --answerclean All --answerdiff None --answeredit None --save
+
+yay --noconfirm --needed -Sy \
   alacritty \
   neovim \
   neovim-plug \
   tmux \
+  zsh \
+  rust \
   npm
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
