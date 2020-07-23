@@ -12,6 +12,7 @@ set nowritebackup " No need to create ~ files (on write event)
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set modifiable
 " TODO: automatically adapt to file tab settings.
 
 " General: Keybinds
@@ -26,14 +27,19 @@ nnoremap td  :tabclose<CR>
 
 " Plugins
 call plug#begin()
-  Plug 'shime/vim-livedown' " Live markdown preview
-  Plug 'cespare/vim-toml' " Syntax for toml
-  Plug 'leafgarland/typescript-vim' " Syntax for typescript
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+  Plug 'shime/vim-livedown'
+  Plug 'cespare/vim-toml'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc-rls'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-  Plug 'sbdchd/neoformat' " Code formatter 
-  Plug 'maksimr/vim-jsbeautify' " Code formatter for js/html/json
 call plug#end()
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Plugins: Livedown
 let g:livedown_autorun = 1
@@ -41,5 +47,3 @@ let g:livedown_open = 1
 let g:livedown_port = 1337
 let g:livedown_browser = "firefox"
 
-" Plugins: Tsuquyomi
-autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
