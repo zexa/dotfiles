@@ -32,6 +32,8 @@ call plug#begin()
   Plug 'leafgarland/typescript-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-rls'
+  Plug 'cespare/vim-toml' " Syntax for toml
+  Plug 'leafgarland/typescript-vim' " Syntax for typescript
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 
@@ -46,4 +48,9 @@ let g:livedown_autorun = 1
 let g:livedown_open = 1
 let g:livedown_port = 1337
 let g:livedown_browser = "firefox"
+
+" Plugins: markdown-preview
+" TODO: Need a way to make browser env modular
+let g:mkdp_auto_start=1
+let g:mkdp_browser=$FIREFOX
 

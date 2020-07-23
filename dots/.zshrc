@@ -19,3 +19,4 @@ source $HOME/.poetry/env
 export PATH="/home/augustinas/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
