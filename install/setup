@@ -3,16 +3,15 @@
 DISTRIB_ID=$(cat /etc/*-release | grep DISTRIB_ID)
 VERSION=${DISTRIB_ID#"DISTRIB_ID="}
 
+echo "Installing for $VERSION"
 case $VERSION in
   Ubuntu)
-    ./global-setup
     ./ubuntu-setup
-    ./symlink-setup
     ;;
-  Arch)
-    ./global-setup
+  Arch | ManjaroLinux)
     ./arch-setup
-    ./symlink-setup
     ;;
 esac
 
+./global-setup
+./symlink-setup
