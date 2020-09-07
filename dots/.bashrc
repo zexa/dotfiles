@@ -26,3 +26,4 @@ atp ${HOME}/.local/bin
 if [ $SSH_TTY ]; then export PS1="(ssh) \[\e[1m\]\$\]\e[0m\] "; fi
 
 source $HOME/.bashrc.aliases
+
