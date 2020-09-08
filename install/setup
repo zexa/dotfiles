@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 DISTRIB_ID=$(cat /etc/*-release | grep DISTRIB_ID)
 VERSION=${DISTRIB_ID#"DISTRIB_ID="}
 

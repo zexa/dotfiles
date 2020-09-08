@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # TODO: Make this configurable
 # Git configuration
 git config --global user.name "Zexa"
