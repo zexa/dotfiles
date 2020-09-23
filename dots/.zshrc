@@ -20,3 +20,5 @@ export PATH="/home/augustinas/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# PHP
+export PATH="$HOME/.symfony/bin:$PATH"

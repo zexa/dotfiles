@@ -31,8 +31,8 @@ call plug#begin()
   Plug 'cespare/vim-toml'
   Plug 'leafgarland/typescript-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'neoclide/coc-rls'
-  Plug 'cespare/vim-toml' " Syntax for toml
+  Plug 'neoclide/coc-rls' " Rust
+  Plug 'neoclide/coc-yaml'
   Plug 'leafgarland/typescript-vim' " Syntax for typescript
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
