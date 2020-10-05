@@ -16,6 +16,7 @@ source $HOME/.cargo/env
 
 # Python
 source $HOME/.poetry/env
+source $HOME/.local/bin # pip3 likes to install packages here
 export PATH="/home/augustinas/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
