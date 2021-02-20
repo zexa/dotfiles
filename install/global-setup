@@ -10,3 +10,5 @@ git config --global core.excludesfile ~/.gitignore
 
 # Install npm -g packages to home folder
 npm config set prefix ~/.npm
+npm install -g neovim
+
