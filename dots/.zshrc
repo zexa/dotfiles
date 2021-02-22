@@ -23,3 +23,5 @@ export PATH=$PATH:/$NPM_PACKAGES/bin
 # PHP
 export PATH="$HOME/.symfony/bin:$PATH"
 
+# Aesthetics
+(cat ~/.cache/wal/sequences &)
