@@ -1,5 +1,5 @@
 call plug#begin()
-  Plug 'shime/vim-livedown'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'cespare/vim-toml'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-yaml'
@@ -10,6 +10,7 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
+  Plug 'junegunn/limelight.vim'
 call plug#end()
 
 " Plugins: Ale
@@ -25,11 +26,12 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Plugins: Livedown
-let g:livedown_autorun = 1
-let g:livedown_open = 1
-let g:livedown_port = 1337
-let g:livedown_browser = "firefox"
+" Plugins: Limelight (dims every line but the current one)
+autocmd VimEnter * Limelight
+
+" Plugins: markdown-preview.nvim
+let g:mkdp_auto_start = 1
+let g:mkdp_browser = 'firefox'
 
 " General: Preferences
 set syntax=on
