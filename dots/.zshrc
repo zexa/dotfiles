@@ -15,7 +15,8 @@ export PATH=$PATH:/$NPM_PACKAGES/bin
 #source $HOME/.cargo/env
 
 # Python
-#source $HOME/.poetry/env
+export PATH="$HOME/.poetry/bin:$PATH"
+source $HOME/.poetry/env
 #export PATH="/home/augustinas/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
@@ -25,3 +26,13 @@ export PATH="$HOME/.symfony/bin:$PATH"
 
 # Aesthetics
 (cat ~/.cache/wal/sequences &)
+
+# Kubernetes
+function ka() {
+  kubectl get all -n $1
+}
+
+function kl() {
+  kubectl logs $1 -n $2
+}
+

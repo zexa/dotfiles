@@ -31,7 +31,7 @@ autocmd VimEnter * Limelight
 
 " Plugins: markdown-preview.nvim
 let g:mkdp_auto_start = 1
-let g:mkdp_browser = 'firefox'
+let g:mkdp_browser = 'chromium'
 
 " General: Preferences
 set syntax=on
