@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ../dots
+find . -type d -exec sh -xvc 'mkdir -p $HOME/${0#"./"}' {} \;
+find . -type f -exec sh -xvc 'rm $HOME/${0#"./"} && ln -snf $(pwd)/$(basename $0) $HOME/${0#"./"}' {} \;
+

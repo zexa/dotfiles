@@ -1,19 +1,20 @@
 #!/bin/bash
-
 set -x
 
-DISTRIB_ID=$(cat /etc/*-release | grep DISTRIB_ID)
-VERSION=${DISTRIB_ID#"DISTRIB_ID="}
+unameOut="$(uname -s)"
 
-echo "Installing for $VERSION"
-case $VERSION in
-  Ubuntu)
-    ./ubuntu-setup
-    ;;
-  Arch | ManjaroLinux)
-    ./arch-setup
-    ;;
+echo "Detected ${unameOut}"
+
+case "${unameOut}" in
+    Linux*) ./linux-setup;;
+    Darwin*) ./mac-setup;;
+    *) unsupported=true;;
 esac
 
+if $unsupported; then
+  echo "Device unsupported"
+  exit 0
+fi
+
 ./global-setup
-./symlink-setup
+

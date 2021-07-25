@@ -1,0 +1,17 @@
+#!/bin/bash
+set -x
+
+DISTRIB_ID=$(cat /etc/*-release | grep DISTRIB_ID)
+VERSION=${DISTRIB_ID#"DISTRIB_ID="}
+echo "Installing for $VERSION"
+case $VERSION in
+  Ubuntu)
+    ./ubuntu-setup
+    ;;
+  Arch | ManjaroLinux)
+    ./arch-setup
+    ;;
+esac
+
+./symlink-setup
+
