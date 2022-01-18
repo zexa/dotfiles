@@ -12,27 +12,26 @@ export NPM_PACKAGES="$HOME/.npm"
 export PATH=$PATH:/$NPM_PACKAGES/bin
 
 # Rust
-#source $HOME/.cargo/env
+if [[ -z $HOME/.cargo ]]; then
+  source $HOME/.cargo/env
+fi
 
 # Python
-export PATH="$HOME/.poetry/bin:$PATH"
-source $HOME/.poetry/env
-#export PATH="/home/augustinas/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
-# PHP
-export PATH="$HOME/.symfony/bin:$PATH"
+if [[ -z $HOME/.poetry ]]; then
+  export PATH="$HOME/.poetry/bin:$PATH"
+  source $HOME/.poetry/env
+fi
+#if [[ -z $HOME/.pyenv ]]; then
+#  export PATH="/home/augustinas/.pyenv/bin:$PATH"
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv virtualenv-init -)"
+#fi
 
 # Aesthetics
-(cat ~/.cache/wal/sequences &)
+if [[ -z $HOME/.cache/wal ]]; then 
+  (cat ~/.cache/wal/sequences &)
+fi
 
 # Kubernetes
-function ka() {
-  kubectl get all -n $1
-}
-
-function kl() {
-  kubectl logs $1 -n $2
-}
+alias dco=docker-compose
 
