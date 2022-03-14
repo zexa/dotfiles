@@ -16,5 +16,15 @@ if $unsupported; then
   exit 0
 fi
 
-./global-setup
+touch ~/.zshrc-platform && chmod +x ~/.zshrc-platform
+touch ~/.zshrc-secrets && chmod +x ~/.zshrc-secrets
+
+# TODO: Make this configurable
+# Git configuration
+git config --global user.name "Zexa"
+git config --global user.email "zexa@cock.li"
+git config --global core.excludesfile ~/.gitignore
+
+# Install npm -g packages to home folder
+npm config set prefix ~/.npm
 

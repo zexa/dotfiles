@@ -5,3 +5,4 @@ git clone git@github.com:zexa/dotfiles.git
 cd install
 ./setup
 ```
+
