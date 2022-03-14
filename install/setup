@@ -12,7 +12,7 @@ case "${unameOut}" in
 esac
 
 if $unsupported; then
-  echo "Device unsupported"
+  echo "Platform unsupported"
   exit 0
 fi
 

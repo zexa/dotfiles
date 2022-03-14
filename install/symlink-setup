@@ -1,5 +1,0 @@
-#!/bin/bash
-cd ../dots
-find . -type d -exec sh -xvc 'mkdir -p $HOME/${0#"./"}' {} \;
-find . -type f -exec sh -xvc 'ln -srf $0 $HOME/${0#"./"}' {} \;
-
