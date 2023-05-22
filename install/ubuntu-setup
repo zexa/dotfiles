@@ -2,3 +2,8 @@
 
 set -x
 
+sudo apt install \
+  hstr \
+  tmux \
+  npm
+

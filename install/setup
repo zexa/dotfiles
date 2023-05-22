@@ -8,23 +8,21 @@ echo "Detected ${unameOut}"
 case "${unameOut}" in
     Linux*) ./linux-setup;;
     Darwin*) ./mac-setup;;
-    *) unsupported=true;;
+    *) 
+      echo "Platform unsupported"
+      exit 0
+      ;;
 esac
-
-if $unsupported; then
-  echo "Platform unsupported"
-  exit 0
-fi
 
 touch ~/.zshrc-platform && chmod +x ~/.zshrc-platform
 touch ~/.zshrc-secrets && chmod +x ~/.zshrc-secrets
 
-# TODO: Make this configurable
 # Git configuration
 git config --global user.name "Zexa"
 git config --global user.email "zexa@cock.li"
 git config --global core.excludesfile ~/.gitignore
 
 # Install npm -g packages to home folder
-npm config set prefix ~/.npm
+mkdir -p "$HOME/.npm/bin"
+npm config set prefix "$HOME/.npm"
 
