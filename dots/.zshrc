@@ -66,7 +66,7 @@ alias http="http --verbose --all"
 source ~/.zshrc-platform # Platform specific, generated via script
 source ~/.zshrc-secrets # Empty file by default
 
-source /home/zexa/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias wezterm="flatpak run org.wezfurlong.wezterm" 
 

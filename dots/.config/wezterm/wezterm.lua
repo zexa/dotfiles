@@ -15,11 +15,11 @@ config.keys = {
     key = '5',
     mods = 'CMD',
     action = wezterm.action.SplitPane {
-      direction = 'Bottom',
+      direction = 'Down',
     },
   },
   {
-    key = '"',
+    key = '\'',
     mods = 'CMD',
     action = wezterm.action.SplitPane {
       direction = 'Right',
