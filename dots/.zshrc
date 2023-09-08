@@ -1,29 +1,8 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="spaceship"
-export plugins=(git)
+export plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-
-# SPACESHIP THEME
-#SPACESHIP_GIT_EMAIL_SHOW="${SPACESHIP_GIT_EMAIL_SHOW=true}"
-#SPACESHIP_GIT_EMAIL_PREFIX="${SPACESHIP_GIT_EMAIL_PREFIX="$SPACESHIP_GIT_SYMBOL"}"
-#SPACESHIP_GIT_EMAIL_SUFFIX="${SPACESHIP_GIT_EMAIL_SUFFIX=""}"
-#SPACESHIP_GIT_EMAIL_COLOR="${SPACESHIP_GIT_EMAIL_COLOR="magenta"}"
-#spaceship_git_email() {
-#  [[ $SPACESHIP_GIT_SHOW == false ]] && return
-#
-#  local git_current_email=$(git config user.email)
-#  [[ -z "$git_current_email" ]] && return
-#
-#  spaceship::section \
-#    "$SPACESHIP_GIT_EMAIL_COLOR" \
-#    "$SPACESHIP_GIT_EMAIL_PREFIX${git_current_email}$SPACESHIP_GIT_EMAIL_SUFFIX"
-#}
-#export SPACESHIP_GIT_EMAIL_PREFIX="with "
-#export SPACESHIP_GIT_EMAIL_COLOR="magenta"
-#export SPACESHIP_TIME_SHOW=true
-#export SPACESHIP_TIME_PREFIX=""
-#export SPACESHIP_PROMPT_ORDER=(dir git line_sep time char)
 
 # EDITOR
 export EDITOR=nvim
@@ -79,13 +58,8 @@ if command -v zoxide &> /dev/null; then
 fi
 
 # Spaceship
-if command -v spaceship &> /dev/null; then
+if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
-fi
-
-# Exa
-if command -v exa &> /dev/null; then
-  alias ls=exa
 fi
 
 # Erd
@@ -99,4 +73,8 @@ alias http="http --verbose --all"
 # Other
 source ~/.zshrc-platform # Platform specific, generated via script
 source ~/.zshrc-secrets # Empty file by default
+
+source /home/zexa/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias wezterm="flatpak run org.wezfurlong.wezterm" 
 
