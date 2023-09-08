@@ -1,7 +1,7 @@
 # ZSH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="spaceship"
-export plugins=(git)
+export plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # EDITOR
@@ -50,7 +50,7 @@ if command -v zoxide &> /dev/null; then
 fi
 
 # Spaceship
-if command -v spaceship &> /dev/null; then
+if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
 
@@ -65,4 +65,8 @@ alias http="http --verbose --all"
 # Other
 source ~/.zshrc-platform # Platform specific, generated via script
 source ~/.zshrc-secrets # Empty file by default
+
+source /home/zexa/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias wezterm="flatpak run org.wezfurlong.wezterm" 
 
